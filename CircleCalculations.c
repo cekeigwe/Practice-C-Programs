@@ -21,7 +21,7 @@ int main() {
     float radius;
     float diameter;
     
-    printf("Name: Christian Ekeigwe\nDOB: February 1, 2002\nMobile: 7655864443\n");
+    printf("Name: Christian Ekeigwe\n");
     printf("Make a choice from 1 to 3 to choose a calculation to be performed on/for a circle\n");
     printf("1. Area\n2.Circumference\n3.Exit\n\n");
     scanf("%d", &a);
