@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define NAME_SIZE 30
 #define CLASS_SIZE 5
 
 char group[NAME_SIZE];
