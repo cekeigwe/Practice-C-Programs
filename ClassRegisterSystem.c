@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define NAME_SIZE 30
 #define CLASS_SIZE 5
 
 char group[NAME_SIZE];
@@ -25,12 +26,14 @@ int main()
     classStudentFname();
     classStudentLname();
     classStudentID();
+    
     return 0;
 }
 
 int classStudentFname(void)
 {
     int index1;
+    //int sentinel = 1; //Implement sentinel values across all functions
     
     printf("Please enter the first name of students below: \n");
     
@@ -38,6 +41,7 @@ int classStudentFname(void)
     {
         scanf("%s", &studentfname[index1]);
     }
+    printf("Number of students: %d\n", index1);
     
     return 0;
 }
@@ -52,6 +56,7 @@ int classStudentLname(void)
     {
         scanf("%s", &studentlname[index1]);
     }
+    printf("Number of students: %d\n", index1);
     
     return 0;
 }
@@ -66,6 +71,7 @@ int classStudentID(void)
     {
         scanf("%s", &studentid[index1]);
     }
+    printf("Number of students: %d\n", index1);
     
     return 0;
 }
