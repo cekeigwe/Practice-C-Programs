@@ -9,20 +9,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define NAME_SIZE 30
-#define CLASS_SIZE 5
+//#define NAME_SIZE 30
+#define CLASS_SIZE 30 //Constant value for size of the class
 
-char group[NAME_SIZE];
+//char group[NAME_SIZE];
+
+//Global array declaration
 char studentfname[CLASS_SIZE];
 char studentlname[CLASS_SIZE];
 char studentid[CLASS_SIZE];
 
+//Function declaration
 int classStudentFname(void);
 int classStudentLname(void);
 int classStudentID(void);
 
 int main()
 {
+    //Function call?
     classStudentFname();
     classStudentLname();
     classStudentID();
@@ -32,7 +36,7 @@ int main()
 
 int classStudentFname(void)
 {
-    int index1;
+    int index1; //Counter value for the "for" loop
     char sentinel = ';'; //Implement sentinel values across all functions
     
     printf("Please enter the first name of students below: \n");
@@ -40,12 +44,12 @@ int classStudentFname(void)
     for (index1 = 0; index1 < CLASS_SIZE; index1++)
     {
         scanf("%s", &studentfname[index1]);
-        if(studentfname[index1] == sentinel)
+        if(studentfname[index1] == sentinel) //Uses a flag to allow a flexible amount of inputs and stop inputs
         {
             break;
         }
     }
-    printf("Number of students: %d\n", index1);
+    printf("Number of students: %d\n", index1); //Prints the total inputs
     
     return 0;
 }
