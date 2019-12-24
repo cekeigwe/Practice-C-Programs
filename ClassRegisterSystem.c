@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define NAME_SIZE 30
 #define CLASS_SIZE 5
 
 char group[NAME_SIZE];
@@ -25,20 +26,24 @@ int main()
     classStudentFname();
     classStudentLname();
     classStudentID();
-    
+
     return 0;
 }
 
 int classStudentFname(void)
 {
     int index1;
-    //int sentinel = 1; //Implement sentinel values across all functions
+    char sentinel = ';'; //Implement sentinel values across all functions
     
     printf("Please enter the first name of students below: \n");
     
     for (index1 = 0; index1 < CLASS_SIZE; index1++)
     {
         scanf("%s", &studentfname[index1]);
+        if(studentfname[index1] == sentinel)
+        {
+            break;
+        }
     }
     printf("Number of students: %d\n", index1);
     
@@ -48,12 +53,17 @@ int classStudentFname(void)
 int classStudentLname(void)
 {
     int index1;
+    char sentinel = ';';
     
     printf("Please enter the last name of students below: \n");
     
     for (index1 = 0; index1 < CLASS_SIZE; index1++)
     {
         scanf("%s", &studentlname[index1]);
+        if(studentlname[index1] == sentinel)
+        {
+            break;
+        }
     }
     printf("Number of students: %d\n", index1);
     
@@ -63,12 +73,17 @@ int classStudentLname(void)
 int classStudentID(void)
 {
     int index1;
+    char sentinel = ';';
     
-    printf("Please eneter the student ID of the students below: \n");
+    printf("Please enter the student ID of the students below: \n");
     
     for (index1 = 0; index1 < CLASS_SIZE; index1++)
     {
         scanf("%s", &studentid[index1]);
+        if(studentid[index1] == sentinel)
+        {
+            break;
+        }
     }
     printf("Number of students: %d\n", index1);
     
